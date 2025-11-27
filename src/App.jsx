@@ -6,6 +6,8 @@ import { Contact } from "./components/Contact";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { FAQ } from "./components/FAQ";
+import ReviewCarousel from "./components/Review";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,7 +23,10 @@ function App() {
 
       <Hero />
       <Projects />
+      <FAQ />
+
       <Contact />
+      <ReviewCarousel/>
 
       <motion.footer
         className="footer"
@@ -32,6 +37,19 @@ function App() {
       >
         <p> &copy; Inspired by PedroTech.</p>
       </motion.footer>
+      <a href="#home" className="floating-arrow">
+  <motion.span
+    initial={{ y: 0 }}
+    animate={{ y: [0, -10, 0] }}
+    transition={{
+      duration: 1.2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  >
+    ⬆
+  </motion.span>
+</a>
     </div>
   );
 }

@@ -18,10 +18,14 @@ const staggerContainer = {
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  name: "",
+  email: "",
+  phone: "",
+  movingFrom: "",
+  movingTo: "",
+  zipFrom: "",
+  zipTo: "",
+});
 
   const [formStatus, setFormStatus] = useState({
     submitting: false,
@@ -53,10 +57,23 @@ export const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        }
+  name: formData.name,
+  email: formData.email,
+  phone: formData.phone,
+  movingFrom: formData.movingFrom,
+  movingTo: formData.movingTo,
+  zipFrom: formData.zipFrom,
+  zipTo: formData.zipTo,
+  message: `
+    Name: ${formData.name}
+    Email: ${formData.email}
+    Phone: ${formData.phone}
+    Moving From: ${formData.movingFrom}
+    Moving To: ${formData.movingTo}
+    ZIP From: ${formData.zipFrom}
+    ZIP To: ${formData.zipTo}
+  `,
+}
       );
 
       setFormStatus({
@@ -66,11 +83,15 @@ export const Contact = () => {
         message: "Message sent successfully!",
       });
 
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
+     setFormData({
+  name: "",
+  email: "",
+  phone: "",
+  movingFrom: "",
+  movingTo: "",
+  zipFrom: "",
+  zipTo: "",
+});
     } catch (error) {
       setFormStatus({
         submitting: false,
@@ -96,58 +117,93 @@ export const Contact = () => {
         animate="animate"
         viewport={{ once: true }}
       >
-        Get in Touch
+        
       </motion.h2>
 
       <motion.div className="contact-content" variants={fadeInUp}>
         <motion.form className="contact-form" onSubmit={handleSubmit}>
-          <motion.input
-            type="text"
-            name="name"
-            placeholder="Kairat Nurtas"
-            required
-            whileFocus={{ scale: 1.02 }}
-            onChange={handleInputChange}
-          />
-          <motion.input
-            type="email"
-            name="email"
-            placeholder="kairatnurtas@gmail.com"
-            required
-            whileFocus={{ scale: 1.02 }}
-            onChange={handleInputChange}
-          />
-          <motion.textarea
-            name="message"
-            placeholder="You are just my universe (just my universe)
-Rhymed my unique verse
-With my simple words (words, words)
-You're not from those billion"
-            required
-            whileFocus={{ scale: 1.02 }}
-            onChange={handleInputChange}
-          />
+  <motion.input
+    type="text"
+    name="name"
+    placeholder="Your Full Name"
+    required
+    whileFocus={{ scale: 1.02 }}
+    onChange={handleInputChange}
+  />
 
-          <motion.button
-            className="submit-btn"
-            type="submit"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            disabled={formStatus.submitting}
-          >
-            {formStatus.submitting ? "Sending..." : "Send Message"}
-          </motion.button>
+  <motion.input
+    type="email"
+    name="email"
+    placeholder="your@email.com"
+    required
+    whileFocus={{ scale: 1.02 }}
+    onChange={handleInputChange}
+  />
 
-          {formStatus.message && (
-            <motion.div
-              className={`form-status ${
-                formStatus.success ? "success" : "error"
-              } `}
-            >
-              {formStatus.message}
-            </motion.div>
-          )}
-        </motion.form>
+  <motion.input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    required
+    whileFocus={{ scale: 1.02 }}
+    onChange={handleInputChange}
+  />
+
+  <motion.input
+    type="text"
+    name="movingFrom"
+    placeholder="Moving From (City)"
+    required
+    whileFocus={{ scale: 1.02 }}
+    onChange={handleInputChange}
+  />
+
+  <motion.input
+    type="text"
+    name="movingTo"
+    placeholder="Moving To (City)"
+    required
+    whileFocus={{ scale: 1.02 }}
+    onChange={handleInputChange}
+  />
+
+  <motion.input
+    type="text"
+    name="zipFrom"
+    placeholder="Moving From ZIP"
+    required
+    whileFocus={{ scale: 1.02 }}
+    onChange={handleInputChange}
+  />
+
+  <motion.input
+    type="text"
+    name="zipTo"
+    placeholder="Moving To ZIP"
+    required
+    whileFocus={{ scale: 1.02 }}
+    onChange={handleInputChange}
+  />
+
+  <motion.button
+    className="submit-btn"
+    type="submit"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    disabled={formStatus.submitting}
+  >
+    {formStatus.submitting ? "Sending..." : "Send Message"}
+  </motion.button>
+
+  {formStatus.message && (
+    <motion.div
+      className={`form-status ${formStatus.success ? "success" : "error"}`}
+    >
+      {formStatus.message}
+    </motion.div>
+  )}
+</motion.form>
+
       </motion.div>
     </motion.section>
   );

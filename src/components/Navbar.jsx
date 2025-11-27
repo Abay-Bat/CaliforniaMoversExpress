@@ -16,7 +16,7 @@ const staggerContainer = {
 };
 
 function Navbar() {
-  const [open, setOpen] = useState(false); // NEW
+  const [open, setOpen] = useState(false);
 
   return (
     <motion.nav
@@ -33,7 +33,7 @@ function Navbar() {
         MEREI&co
       </motion.div>
 
-      {/* HAMBURGER BUTTON (visible only on mobile) */}
+      {/* HAMBURGER BUTTON */}
       <div className="hamburger" onClick={() => setOpen(!open)}>
         <span className={open ? "line open" : "line"}></span>
         <span className={open ? "line open" : "line"}></span>
@@ -53,12 +53,18 @@ function Navbar() {
         <motion.li variants={fadeInUp} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <a href="#projects">Services</a>
         </motion.li>
+
+        {/* NEW — FAQ */}
+        <motion.li variants={fadeInUp} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+          <a href="#faq">FAQ</a>
+        </motion.li>
+
         <motion.li variants={fadeInUp} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <a href="#contacts">Contacts</a>
         </motion.li>
       </motion.ul>
 
-      {/* MOBILE MENU DROPDOWN (NEW) */}
+      {/* MOBILE MENU */}
       {open && (
         <motion.div
           className="mobile-menu"
@@ -66,9 +72,10 @@ function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <a onClick={() => setOpen(false)}>Home</a>
-          <a onClick={() => setOpen(false)}>Services</a>
-          <a onClick={() => setOpen(false)}>Contacts</a>
+          <a href="#home" onClick={() => setOpen(false)}>Home</a>
+          <a href="#projects" onClick={() => setOpen(false)}>Services</a>
+          <a href="#faq" onClick={() => setOpen(false)}>FAQ</a>
+          <a href="#contacts" onClick={() => setOpen(false)}>Contacts</a>
         </motion.div>
       )}
     </motion.nav>

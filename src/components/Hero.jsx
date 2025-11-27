@@ -36,7 +36,7 @@ export const Hero = () => {
           </motion.div>
 
           <motion.h1 className="glitch" variants={fadeInUp} whileHover={{ scale: 1.02 }}>
-            MEREI&co
+            California Movers Express
           </motion.h1>
 
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
@@ -44,8 +44,7 @@ export const Hero = () => {
           </motion.h2>
 
           <motion.p className="hero-description" variants={fadeInUp}>
-            SD Packing Movers specializes in convenient and reliable relocations.
-            From apartments and townhomes to offices and houses, we’ve got every move covered.
+            At California Movers Express, we believe that moving should be simple, stress-free, and affordable. Our team has over 4 years of hands-on moving experience in California, helping hundreds of families and businesses relocate with care and precision.  After years of working in the moving industry, we decided it was time to launch our own company, built on trust, professionalism, and customer-first service.  Whether you’re moving across town or to a neighboring city — our friendly, experienced movers are here to make your transition smooth and hassle-free.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>

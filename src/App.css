@@ -2579,3 +2579,15 @@ textarea.full {
     font-size: 28px;
   }
 }
+/* default: show full text, hide short text */
+.cta-primary .cta-short { display: none; }
+
+/* small screens: hide full text, show short text */
+@media (max-width: 600px) {
+  .cta-primary .cta-full { display: none; }
+  .cta-primary .cta-short {
+    display: inline;
+    font-size: 0.9rem; /* adjust if needed */
+    white-space: nowrap;
+  }
+}

@@ -130,14 +130,15 @@ export const Contact = () => {
             {formStatus.submitting ? "Sending..." : "Send Message"}
           </motion.button>
 
-          <motion.a
-            href="/privacy-policy"
-            className="privacy-btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Privacy Policy
-          </motion.a>
+          <Link to="/privacy-policy">
+  <motion.button
+    className="privacy-btn"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    Privacy Policy
+  </motion.button>
+</Link>
 
           <p className="sms-consent">
             By submitting this form, you agree to receive SMS notifications from San Diego Packing Movers regarding your moving quote and updates and accept the Conditions of Use and Privacy Notice. Message and data rates may apply. Reply STOP to unsubscribe at any time.

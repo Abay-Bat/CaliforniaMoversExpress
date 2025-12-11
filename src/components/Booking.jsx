@@ -503,16 +503,17 @@ export default function Booking() {
         transition={{ duration: 0.6 }}
       >
       
-<div className="privacy-btn-container">
-  <motion.a
-    href="/privacy-policy"
-    className="privacy-btn-link"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    Privacy Policy
-  </motion.a>
-</div>
+<motion.div className="privacy-btn-container">
+  <Link to="/privacy-policy">
+    <motion.button
+      className="privacy-btn-link"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      Privacy Policy
+    </motion.button>
+  </Link>
+</motion.div>
 
 
 {/* 

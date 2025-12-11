@@ -49,14 +49,17 @@ export const Hero = () => {
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
-            <motion.a
-              href="#projects"
-              className="cta-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View Our Offers
-            </motion.a>
+          <motion.a
+  href="#projects"
+  className="cta-primary"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  aria-label="View Our Offers"
+>
+  <span className="cta-full">View Our Offers</span>
+  <span className="cta-short">View</span>
+</motion.a>
+
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
   <Link to="/booking" className="cta-secondary">Book Now</Link>

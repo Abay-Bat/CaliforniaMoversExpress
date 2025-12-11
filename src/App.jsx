@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
 import PackagesPage from "./components/PackagesPage "; // fixed import (no trailing space)
 import Booking from "./components/Booking"; // <-- make sure Booking.jsx exists at this path
+import { Link } from "react-router-dom";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -48,19 +49,19 @@ function App() {
               </motion.footer>
 
               {/* Floating Book Now Button */}
-              <a href="/booking" className="floating-arrow">
-                <motion.span
-                  initial={{ y: 0 }}
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{
-                    duration: 1.2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  Book Now
-                </motion.span>
-              </a>
+              <Link to="/booking" className="floating-arrow">
+  <motion.span
+    initial={{ y: 0 }}
+    animate={{ y: [0, -5, 0] }}
+    transition={{
+      duration: 1.2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  >
+    Book Now
+  </motion.span>
+</Link>
             </div>
           }
         />

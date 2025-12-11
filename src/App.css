@@ -2539,3 +2539,23 @@ textarea.full {
 .back-btn-main:hover {
   background: linear-gradient(90deg, #c084fc, #7c3aed); /* optional reversed gradient on hover */
 }
+.footer p {
+  font-size: 16px; /* desktop default */
+  margin: 0;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* tablets and smaller */
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+/* phones */
+@media (max-width: 420px) {
+  .footer p {
+    font-size: 12px; /* don't go below ~12px for readability */
+  }
+}

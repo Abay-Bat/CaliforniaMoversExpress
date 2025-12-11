@@ -2560,3 +2560,22 @@ textarea.full {
     font-size: 12px; /* don't go below ~12px for readability */
   }
 }
+.contact h2 {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 36px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 28px;
+  }
+}

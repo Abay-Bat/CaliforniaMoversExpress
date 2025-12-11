@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import truck from "../../public/truck.png";
 
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -32,7 +33,7 @@ export const Hero = () => {
           animate="animate"
         >
           <motion.div className="hero-badge">
-            <span>🤝 Welcome to</span>
+            <span> Welcome to</span>
           </motion.div>
 
           <motion.h1 className="glitch" variants={fadeInUp} whileHover={{ scale: 1.02 }}>
@@ -58,26 +59,41 @@ export const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="#contacts"
+              href="/booking"
               className="cta-secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Us
+              Book Now
             </motion.a>
           </motion.div>
 
-          <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="https://instagram.com" target="_blank">
-              <i className="fab fa-instagram"></i>
-            </motion.a>
-            <motion.a href="https://whatsapp.com" target="_blank">
-              <i className="fab fa-whatsapp"></i>
-            </motion.a>
-            <motion.a href="https://telegram.com" target="_blank">
-              <i className="fab fa-telegram"></i>
-            </motion.a>
-          </motion.div>
+        <motion.div className="social-links" variants={staggerContainer}>
+  <motion.a
+    href="https://www.facebook.com/movewithcme?mibextid=wwXIfr&mibextid=wwXIfr"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fab fa-facebook"></i>
+  </motion.a>
+
+  <motion.a
+    href="https://www.instagram.com/movewithcme?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fab fa-instagram"></i>
+  </motion.a>
+
+  <motion.a
+    href="https://www.thumbtack.com/ca/san-diego/moving-companies/california-movers-express-llc/service/550296042678738954"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fas fa-truck"></i>
+  </motion.a>
+</motion.div>
+
         </motion.div>
 
         {/* RIGHT SIDE IMAGE (NOW CORRECTLY PLACED) */}

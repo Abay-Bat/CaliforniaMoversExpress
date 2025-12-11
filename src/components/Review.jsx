@@ -1,6 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const reviews = [
   { name: "Alice Johnson", text: "Amazing service! Highly recommend." },
   { name: "Bob Smith", text: "Professional and reliable. 5/5 stars!" },
@@ -62,11 +62,11 @@ export default function ReviewCarousel() {
 
         {/* Arrows */}
         <button className="arrow left-arrow" onClick={handlePrev}>
-          ⬅
-        </button>
-        <button className="arrow right-arrow" onClick={handleNext}>
-          ➡
-        </button>
+  <FaChevronLeft />
+</button>
+<button className="arrow right-arrow" onClick={handleNext}>
+  <FaChevronRight />
+</button>
       </div>
     </section>
   );

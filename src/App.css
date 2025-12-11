@@ -2408,13 +2408,11 @@ textarea.full {
 
 /* Privacy Policy link button */
 .privacy-btn-link {
-  display: inline-block;       /* inline-block allows auto margin centering */
-  margin: 12px auto 0;         /* top margin 12px, horizontally centered */
-  font-size: 0.85rem;
-  color: #555;
   text-decoration: underline;
-  cursor: pointer;
-  text-align: center;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #7f7474;
 }
 
 /* Ensure parent container uses flex for proper centering */
@@ -2426,7 +2424,7 @@ textarea.full {
 }
 
 .privacy-btn-link:hover {
-  color: #111;
+  color: #4c4949;
 }
 
 

@@ -894,14 +894,19 @@ body {
   color: #b0b0b0; /* slightly darker on hover */
 }
 .privacy-btn {
- text-decoration: underline;
+  display: block;          /* make it block-level so margin auto works */
+  margin: 12px auto 0;     /* top margin 12px, horizontally centered */
+  text-decoration: underline;
   background: none;
   border: none;
   padding: 0;
   color: #7f7474;
+  text-align: center;
+  cursor: pointer;
 }
+
 .privacy-btn:hover {
- color: #4c4949;
+  color: #4c4949;
 }
 /* Navigation */
 .privacy-nav {

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import truck from "../../public/truck.png";
 import { Link } from "react-router-dom";
 
 const fadeInUp = {
@@ -44,7 +45,7 @@ export const Hero = () => {
           </motion.h2>
 
           <motion.p className="hero-description" variants={fadeInUp}>
-            At California Movers Express, we believe that moving should be simple, stress-free, and affordable. Our team has over 4 years of hands-on moving experience in California, helping hundreds of families and businesses relocate with care and precision. After years of working in the moving industry, we decided it was time to launch our own company, built on trust, professionalism, and customer-first service. Whether you’re moving across town or to a neighboring city — our friendly, experienced movers are here to make your transition smooth and hassle-free.
+            At California Movers Express, we believe that moving should be simple, stress-free, and affordable. Our team has over 4 years of hands-on moving experience in California, helping hundreds of families and businesses relocate with care and precision.  After years of working in the moving industry, we decided it was time to launch our own company, built on trust, professionalism, and customer-first service.  Whether you’re moving across town or to a neighboring city — our friendly, experienced movers are here to make your transition smooth and hassle-free.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
@@ -57,27 +58,40 @@ export const Hero = () => {
               View Our Offers
             </motion.a>
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link to="/booking" className="cta-secondary">Book Now</Link>
-            </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+  <Link to="/booking" className="cta-secondary">Book Now</Link>
+</motion.div>
           </motion.div>
 
-          <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="https://www.facebook.com/movewithcme" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook"></i>
-            </motion.a>
+        <motion.div className="social-links" variants={staggerContainer}>
+  <motion.a
+    href="https://www.facebook.com/movewithcme?mibextid=wwXIfr&mibextid=wwXIfr"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fab fa-facebook"></i>
+  </motion.a>
 
-            <motion.a href="https://www.instagram.com/movewithcme" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
-            </motion.a>
+  <motion.a
+    href="https://www.instagram.com/movewithcme?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fab fa-instagram"></i>
+  </motion.a>
 
-            <motion.a href="https://www.thumbtack.com/ca/san-diego/moving-companies/california-movers-express-llc/service/550296042678738954" target="_blank" rel="noopener noreferrer">
-              <i className="fas fa-truck"></i>
-            </motion.a>
-          </motion.div>
+  <motion.a
+    href="https://www.thumbtack.com/ca/san-diego/moving-companies/california-movers-express-llc/service/550296042678738954"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fas fa-truck"></i>
+  </motion.a>
+</motion.div>
+
         </motion.div>
 
-        {/* RIGHT SIDE IMAGE */}
+        {/* RIGHT SIDE IMAGE (NOW CORRECTLY PLACED) */}
         <motion.div
           className="hero-image-container"
           initial={{ opacity: 0, x: 50 }}
@@ -95,7 +109,7 @@ export const Hero = () => {
             }}
           >
             <img
-              src="/truck.png"  // ✅ Correct reference for public folder
+              src={truck}
               alt="Truck"
               style={{
                 width: "100%",

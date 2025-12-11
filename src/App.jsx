@@ -59,7 +59,7 @@ function App() {
       ease: "easeInOut",
     }}
   >
-    Book Now
+    Book 
   </motion.span>
 </Link>
             </div>

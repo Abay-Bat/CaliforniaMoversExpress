@@ -17,15 +17,19 @@ export const PrivacyPolicy = () => {
         <h1>Privacy Policy</h1>
 
         <p>
-          Welcome to our Privacy Policy page. Here we explain how we collect,
-          use, and protect your data. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nulla nec purus euismod, gravida est at, cursus
-          massa. 
+          At CaliforniaMoversExpress, your privacy is very important to us. We collect 
+          personal information such as your name, email, phone number, and details 
+          you provide when booking our moving services. We use this information to 
+          provide and improve our services, communicate with you, and ensure a safe 
+          and reliable experience.
         </p>
 
         <p>
-          By using our services, you agree to our rules and conditions. Message
-          and data rates may apply. You can unsubscribe at any time.
+          We take appropriate measures to protect your information and do not share it 
+          with third parties except as needed to fulfill our services or comply with 
+          legal requirements. By using our services, you consent to this Privacy Policy. 
+          You can contact us to access, update, or delete your personal information at 
+          any time.
         </p>
 
         <Link to="/">
